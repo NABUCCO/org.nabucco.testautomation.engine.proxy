@@ -30,17 +30,20 @@ import org.nabucco.testautomation.script.facade.datatype.metadata.Metadata;
 public interface ProxyCommand {
 
 	/**
+	 * Executes a Command on the specified {@link Metadata} with the 
+	 * specified List of parameters.
 	 * 
-	 * @param metadata
-	 * @param properties
-	 * @return
-	 * @throws SubEngineException
+	 * @param metadata the Metadata to execute the command on
+	 * @param properties the list of parameters
+	 * @return a list containg the result Properties
+	 * @throws SubEngineException thrown, if an error occurs during execution
 	 */
 	public PropertyList execute(Metadata metadata, PropertyList properties) throws SubEngineException;
 	
 	/**
+	 * Returns an {@link ActionTrace} produced during the last execution.
 	 * 
-	 * @return
+	 * @return the ActionTrace
 	 */
 	public ActionTrace getActionTrace();
 	
